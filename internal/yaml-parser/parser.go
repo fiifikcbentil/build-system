@@ -1,5 +1,5 @@
 package yamlparser
 
-func parse(path string) string {
- 
+func Parse(path string) string {
+	return ""
 }

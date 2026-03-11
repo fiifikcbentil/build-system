@@ -3,7 +3,7 @@ package cmd
 import (
  "fmt"
  "github.com/spf13/cobra"
- "github.com/fiifikcbentil/build-system/internal/yaml-parser/yamlparser"
+ "github.com/fiifikcbentil/build-system/internal/yaml-parser"
 )
 
 var parserCmd = &cobra.Command{
@@ -14,7 +14,7 @@ var parserCmd = &cobra.Command{
  Run: func(cmd *cobra.Command, args []string) {
   path := args[0]
   fmt.Printf("parsing the file: %s", path)
-  tasks := yamlparser.parse()
-  fmt.Printf("Task added: %s\n", description)
+  filecontent := yamlparser.Parse("")
+  fmt.Printf("parsed file content: %s", filecontent)
  },
 }
